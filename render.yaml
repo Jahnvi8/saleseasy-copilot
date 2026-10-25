@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: saleseasy-copilot
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false          # set in the Render dashboard; never committed
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash,gemini-3.8-flash,gemini-3.1-flash-lite
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: MAX_INPUT_CHARS
+        value: "2000"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "20"
+      - key: ALLOWED_ORIGINS
+        value: ""            # UI is served from the same origin, so no CORS origins needed
