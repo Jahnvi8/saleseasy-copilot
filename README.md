@@ -6,7 +6,8 @@ whether a human must review it.
 
 **Stack:** React (Vite) · Python 3.12 · FastAPI · Pydantic · Google Gemini (`gemini-3.5-flash`)
 
-- Demo URL: _see submission email_
+- Demo URL: https://saleseasy-copilot-5gv4.onrender.com (Render free tier: the first request after
+  15 min idle takes up to a minute while the container wakes; the header pill shows the live model)
 - Evaluation results: [EVALUATION.md](EVALUATION.md)
 - All data is fictional.
 
